@@ -27,6 +27,12 @@ for (let button of buttons) {
     newLog.innerText = "You have completed the task " + taskTitle + "  at " + timeString;
     document.getElementById("right-section").appendChild(newLog);
 
+    if (currentTask - 1 === 0) {
+      setTimeout(() => {
+        alert(" Congrats!!! You have completed all the current tasks ");
+      }, );
+    }
+
     document.getElementById('clear-history-btn').addEventListener('click', function () {
       const historySection = document.getElementById('right-section');
       historySection.innerHTML = '';
